@@ -1,0 +1,663 @@
+index.html (https://github.com/user-attachments/files/35102739/ROLETABRASIL_atualizada.1.html)
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROLETABRASIL</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: #101b16;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero {
+  background: linear-gradient(130deg,#123b29,#176b46,#a77b25);
+  padding: 25px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  font-weight: 950;
+  margin: 8px 0;
+}
+
+.panel {
+  background: #192820;
+  border: 1px solid #354b3e;
+  border-radius: 14px;
+  padding: 18px;
+  margin-top: 15px;
+}
+
+.muted {
+  font-size: 12px;
+  color: #a9b9ae;
+}
+
+.disc {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin: 25px auto;
+  background: conic-gradient(
+    #176b46 0 25%,
+    #d2a52c 25% 50%,
+    #a72f26 50% 75%,
+    #174c39 75%
+  );
+  border: 7px solid #d2a52c;
+  display: grid;
+  place-items: center;
+  transition: transform 2.5s cubic-bezier(.12,.75,.12,1);
+}
+
+.disc span {
+  background: #102b20;
+  color: white;
+  border: 3px solid #d2a52c;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 900;
+  font-size: 12px;
+  padding: 8px;
+}
+
+button, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 9px;
+  padding: 13px;
+  font-weight: 800;
+}
+
+.primary {
+  background: #176b46;
+  color: white;
+  width: 100%;
+}
+
+.gold {
+  background: #d2a52c;
+  color: #18271d;
+  width: 100%;
+}
+
+.secondary {
+  background: #263a2e;
+  color: white;
+  border: 1px solid #526958;
+  width: 100%;
+}
+
+button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.result {
+  text-align: center;
+  padding: 14px;
+  border: 1px dashed #526958;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.result strong {
+  display: block;
+  font-size: 21px;
+  margin-top: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+select {
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px;
+  border-radius: 9px;
+  background: #263a2e;
+  color: white;
+  border: 1px solid #526958;
+}
+
+.tag {
+  display: inline-block;
+  background: #263a2e;
+  border: 1px solid #526958;
+  border-radius: 20px;
+  padding: 6px 10px;
+  margin: 3px;
+  font-size: 11px;
+}
+
+.final {
+  background: linear-gradient(130deg,#153c2b,#1c6041);
+  color: white;
+  border-radius: 12px;
+  padding: 17px;
+  margin-top: 12px;
+}
+
+.final h2 {
+  font-size: 25px;
+  margin: 8px 0;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.data div {
+  background: #ffffff18;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.data small {
+  display: block;
+  font-size: 10px;
+  opacity: .7;
+  text-transform: uppercase;
+}
+
+.category-result {
+  background: #263a2e;
+  border: 1px solid #526958;
+  border-left: 4px solid #d2a52c;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.category-result strong {
+  display: block;
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.mapping {
+  font-size: 13px;
+  margin-top: 8px;
+  color: #a9b9ae;
+}
+
+.hidden {
+  display: none;
+}
+
+@media(max-width:420px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+  <div style="font-size:26px">🇧🇷 ✦ 🇧🇷</div>
+  <h1>ROLETABRASIL</h1>
+  <div style="font-size:11px;letter-spacing:2px">
+    TATTOO ROULETTE · EDIÇÃO BRASILEIRA
+  </div>
+  <p style="font-size:12px">
+    Folclore, lendas urbanas, personagens e cultura nacional.
+  </p>
+</div>
+
+<!-- ROLETA -->
+
+<div class="panel">
+  <div class="muted">01 / ROLETA DE TEMAS</div>
+
+  <div class="disc" id="disc">
+    <span id="center">GIRE A ROLETA</span>
+  </div>
+
+  <div class="result">
+    <span class="muted">TEMA SORTEADO</span>
+    <strong id="theme">Aguardando sorteio...</strong>
+  </div>
+
+  <button class="primary" id="spin">
+    🎰 GIRAR ROLETA
+  </button>
+</div>
+
+<!-- O QUE CAIU -->
+
+<div class="panel">
+  <div class="muted">02 / O QUE CAIU?</div>
+
+  <div class="category-result">
+    <span class="muted">CATEGORIA SORTEADA</span>
+
+    <strong id="category">
+      Aguardando sorteio...
+    </strong>
+
+    <div class="mapping" id="mapping">
+      Categoria = Tema
+    </div>
+  </div>
+</div>
+
+<!-- PERSONALIZAÇÃO -->
+
+<div class="panel">
+  <div class="muted">03 / PERSONALIZE A TATUAGEM</div>
+
+  <div class="grid">
+
+    <div>
+      <label for="size">Tamanho</label>
+      <select id="size">
+        <option value="random">Surpresa</option>
+        <option>Pequena (4–6 cm)</option>
+        <option>Média (7–12 cm)</option>
+        <option>Grande (13–20 cm)</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="price">Preço</label>
+      <select id="price">
+        <option value="random">Surpresa (R$ 500–1.500)</option>
+        <option value="500">R$ 500</option>
+        <option value="600">R$ 600</option>
+        <option value="700">R$ 700</option>
+        <option value="800">R$ 800</option>
+        <option value="900">R$ 900</option>
+        <option value="1000">R$ 1.000</option>
+        <option value="1100">R$ 1.100</option>
+        <option value="1200">R$ 1.200</option>
+        <option value="1300">R$ 1.300</option>
+        <option value="1400">R$ 1.400</option>
+        <option value="1500">R$ 1.500</option>
+      </select>
+    </div>
+
+  </div>
+</div>
+
+<!-- CATEGORIAS -->
+
+<div class="panel">
+  <div class="muted">04 / CATEGORIAS INCLUÍDAS</div>
+  <div id="tags"></div>
+
+  <p class="muted">
+    Sem comidas, bebidas, estilos artísticos ou locais do corpo.
+    Música aparece somente por cantores e bandas brasileiras.
+  </p>
+</div>
+
+<!-- RESULTADO COMPLETO -->
+
+<div class="panel">
+  <div class="muted">05 / COMBINAÇÃO COMPLETA</div>
+
+  <button class="gold" id="generate">
+    🔥 SORTEAR TUDO
+  </button>
+
+  <div id="output" class="hidden">
+
+    <div class="final">
+      <div style="font-size:10px;letter-spacing:2px">
+        SUA TATUAGEM BRASILEIRA
+      </div>
+
+      <h2 id="outTheme"></h2>
+
+      <div class="data">
+
+        <div>
+          <small>Categoria</small>
+          <b id="outCategory"></b>
+        </div>
+
+        <div>
+          <small>Tamanho</small>
+          <b id="outSize"></b>
+        </div>
+
+        <div>
+          <small>Preço</small>
+          <b id="outPrice"></b>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="secondary" id="again" style="margin-top:10px">
+      ↻ NOVO SORTEIO
+    </button>
+
+  </div>
+</div>
+
+<!-- HISTÓRICO -->
+
+<div class="panel">
+  <div class="muted">06 / HISTÓRICO</div>
+
+  <div id="history" class="muted">
+    Nenhum sorteio ainda.
+  </div>
+
+  <button class="secondary" id="clear" style="margin-top:10px">
+    Limpar histórico
+  </button>
+</div>
+
+</div>
+
+<script>
+
+// =====================================
+// BANCO DE TEMAS E CATEGORIAS
+// =====================================
+
+const groups = {
+
+  "Folclore brasileiro": [
+    "Saci-Pererê", "Cuca", "Curupira", "Boitatá", "Iara",
+    "Boto-cor-de-rosa", "Corpo-seco", "Mula sem cabeça", "Mapinguari",
+    "Vitória-régia", "Negrinho do Pastoreio", "Pisadeira",
+    "Caboclo-d'água", "Mão pelada", "Papa-figo", "Boiúna",
+    "Mãe do ouro", "Bicho-papão brasileiro", "Mãe-d'água", "Romãozinho"
+  ],
+
+  "Lendas urbanas": [
+    "Acre — Mapinguari",
+    "Alagoas — Papa-figo",
+    "Amapá — Cobra Sofia",
+    "Amazonas — Boto-cor-de-rosa",
+    "Bahia — Mulher de Roxo",
+    "Ceará — Assombração da estrada",
+    "Distrito Federal — Fantasma da UnB",
+    "Espírito Santo — Procissão das Almas",
+    "Goiás — Romãozinho",
+    "Maranhão — Carruagem de Ana Jansen",
+    "Mato Grosso — Minhocão do Pari",
+    "Mato Grosso do Sul — Pé-de-Garrafa",
+    "Minas Gerais — Loira do Bonfim",
+    "Pará — Matinta Pereira",
+    "Paraíba — Pai do Mato",
+    "Paraná — Gralha Azul",
+    "Pernambuco — Perna Cabeluda",
+    "Piauí — Cabeça de Cuia",
+    "Rio de Janeiro — Fantasma do Edifício Central",
+    "Rio Grande do Norte — Labatut",
+    "Rio Grande do Sul — Salamanca do Jarau",
+    "Rondônia — Mapinguari",
+    "Roraima — Lendas da Serra do Tepequém",
+    "Santa Catarina — Bruxa de Itaguaçu",
+    "São Paulo — Fantasma do Edifício Joelma",
+    "Sergipe — Nego d'Água",
+    "Tocantins — Pé de Garrafa"
+  ],
+
+  "Personagens populares": [
+    "Zé Gotinha",
+    "Carmen Miranda",
+    "Lampião e Maria Bonita",
+    "Cangaço",
+    "Mônica",
+    "Cebolinha",
+    "Chico Bento",
+    "Zé Carioca",
+    "Jeca Tatu",
+    "Fofão",
+    "Chaves versão brasileira",
+    "Emília",
+    "Visconde de Sabugosa",
+    "Menino Maluquinho",
+    "Senninha",
+    "Didi Mocó",
+    "Juca Pato"
+  ],
+
+  "Cantores e bandas brasileiras": [
+    // MPB
+    "Tim Maia", "Elis Regina", "Chico Buarque", "Caetano Veloso",
+    "Gilberto Gil", "Djavan", "Seu Jorge", "Jorge Ben Jor",
+    "Novos Baianos",
+
+    // Rock brasileiro
+    "Rita Lee", "Raul Seixas", "Cazuza", "Renato Russo",
+    "Legião Urbana", "Mamonas Assassinas", "Chico Science",
+    "Nação Zumbi", "Cássia Eller", "Sepultura", "Charlie Brown Jr.",
+    "Planet Hemp", "Pitty", "Os Mutantes", "O Rappa"
+  ],
+
+  "Cultura regional": [
+    "Cordel nordestino", "Seringueiro amazônico", "Festa Junina",
+    "Frevo", "Carnaval de rua", "Samba", "Funk carioca",
+    "Pichação brasileira", "Futebol de várzea", "Gambiarra brasileira",
+    "Pipa de rua"
+  ],
+
+  "Animais brasileiros": [
+    "Onça-pintada", "Capivara", "Cachorro caramelo",
+    "Pombo brasileiro", "Vira-lata caramelo"
+  ],
+
+  "Festas e manifestações populares": [
+    "Festa Junina", "Carnaval de rua", "Frevo", "Samba", "Funk carioca"
+  ]
+
+};
+
+// =====================================
+// VARIÁVEIS
+// =====================================
+
+const $ = id => document.getElementById(id);
+
+const pick = array =>
+  array[Math.floor(Math.random() * array.length)];
+
+const categories = Object.keys(groups);
+
+let current = null;
+let category = null;
+let history = [];
+
+// =====================================
+// MOSTRAR CATEGORIAS
+// =====================================
+
+$("tags").innerHTML = categories
+  .map(x => `<span class="tag">${x}</span>`)
+  .join("");
+
+// =====================================
+// SORTEAR TEMA
+// =====================================
+
+function draw() {
+
+  category = pick(categories);
+
+  current = pick(groups[category]);
+
+  $("theme").textContent = current;
+
+  $("category").textContent = category;
+
+  $("mapping").textContent =
+    category + " = " + current;
+
+  $("center").textContent = "BRASIL!";
+
+}
+
+// =====================================
+// ANIMAÇÃO DA ROLETA
+// =====================================
+
+function spin() {
+
+  $("spin").disabled = true;
+
+  $("spin").textContent = "GIRANDO...";
+
+  $("disc").style.transform =
+    "rotate(" + (1800 + Math.random() * 1800) + "deg)";
+
+  let i = 0;
+
+  const timer = setInterval(() => {
+
+    draw();
+
+    i++;
+
+    if (i >= 16) {
+
+      clearInterval(timer);
+
+      draw();
+
+      $("spin").disabled = false;
+
+      $("spin").textContent = "🎰 GIRAR NOVAMENTE";
+
+    }
+
+  }, 150);
+
+}
+
+// =====================================
+// GERAR RESULTADO COMPLETO
+// =====================================
+
+function generate() {
+
+  if (!current) {
+    draw();
+  }
+
+  const size = $("size").value === "random"
+    ? pick(["Pequena (4–6 cm)", "Média (7–12 cm)", "Grande (13–20 cm)"])
+    : $("size").value;
+
+  const price =
+    $("price").value === "random"
+      ? 500 + Math.floor(Math.random() * 11) * 100
+      : Number($("price").value);
+
+  const money = price.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    maximumFractionDigits: 0
+  });
+
+  $("outTheme").textContent = current;
+
+  $("outCategory").textContent = category;
+
+  $("outSize").textContent = size;
+
+  $("outPrice").textContent = money;
+
+  $("output").classList.remove("hidden");
+
+  // HISTÓRICO
+
+  history.unshift(
+    category + " = " + current +
+    " · " + size +
+    " · " + money
+  );
+
+  history = history.slice(0, 8);
+
+  renderHistory();
+
+}
+
+// =====================================
+// HISTÓRICO
+// =====================================
+
+function renderHistory() {
+
+  $("history").innerHTML = history.length
+    ? history.map((item, index) =>
+        `<div class="tag">${index + 1}. ${item}</div>`
+      ).join("")
+    : "Nenhum sorteio ainda.";
+
+}
+
+// =====================================
+// BOTÕES
+// =====================================
+
+$("spin").onclick = spin;
+
+$("generate").onclick = generate;
+
+$("again").onclick = () => {
+
+  draw();
+
+  generate();
+
+};
+
+$("clear").onclick = () => {
+
+  history = [];
+
+  renderHistory();
+
+};
+
+</script>
+
+</body>
+</html>
